@@ -1,0 +1,39 @@
+# vim:ts=8:sw=8:tw=80
+
+PipeEvent Plugin for {Adium}[http://adium.im/]
+Written by {joshua stein}[mailto:jcs@jcs.org] - {http://jcs.org/}[http://jcs.org/]
+
+This is a simple plugin that will add a "Pipe event" action that you can add
+to events, which will pipe the contents of the event text to an executable of
+your choosing.
+
+The most common case would be adding it to the "Message received" event, which
+would pipe the content of the incoming message to your program.
+
+To install, download the plugin:
+
+	https://github.com/downloads/jcs/adium-pipemessage/PipeEventPlugin.AdiumPlugin.zip
+
+Unzip it and double-click it.  Adium should notify you that the plugin has been
+installed and you may have to restart Adium.
+
+In Adium's Preferences, choose Events.  You may also create a per-contact alert
+by double-clicking on a contact and clicking the Events icon.
+
+Click an event, such as "Message received", and click the [+] button.  Select
+"Pipe event to command".  Enter the *full path* to your command and hit OK.
+
+The command will be executed every time the event is run and have STDOUT and
+STDERR closed, and then have the full content of the event/message written to
+its STDIN.  For easier scripting, the event/message has a trailing newline
+appended.  The title of the event (for messages, the sender's name) will be
+passed to the command as its first argument.
+
+A simple script that will write every received message to a file:
+
+	#!/usr/bin/ruby
+	File.open("#{ENV['HOME']}/adium.log", "a+") do |f|
+	  f.puts "#{Time.now}: #{ARGV[0]} - #{STDIN.read}"
+	end
+
+Note: make sure the command is executable (chmod +x).
