@@ -3,7 +3,7 @@
 #import <Adium/AISharedAdium.h>
 #import <Adium/AIContactAlertsControllerProtocol.h>
 
-#define KEY_COMMAND @"PipeEvent"
+#define KEY_COMMAND			@"PipeEvent"
 
 @protocol AIContentFilter;
 
