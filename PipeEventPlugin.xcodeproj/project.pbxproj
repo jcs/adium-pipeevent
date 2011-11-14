@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		012E22A412C98DEF001DB640 /* PipeEventDetailPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 012E22A312C98DEF001DB640 /* PipeEventDetailPane.m */; };
 		012E241312C98F85001DB640 /* PipeEvent.nib in Resources */ = {isa = PBXBuildFile; fileRef = 012E241212C98F85001DB640 /* PipeEvent.nib */; };
 		012E25CF12C995CD001DB640 /* TerminalIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 012E25CE12C995CD001DB640 /* TerminalIcon.png */; };
+		01F4451414717363001FF6F6 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F4451314717363001FF6F6 /* Adium.framework */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		A7996F950E79D70B0000BA6C /* PipeEventPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A7996F940E79D70B0000BA6C /* PipeEventPlugin.m */; };
-		A7996F990E79D7950000BA6C /* Adium.Framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7996F980E79D7950000BA6C /* Adium.Framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +20,7 @@
 		012E22A312C98DEF001DB640 /* PipeEventDetailPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PipeEventDetailPane.m; sourceTree = "<group>"; };
 		012E241212C98F85001DB640 /* PipeEvent.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = PipeEvent.nib; sourceTree = "<group>"; };
 		012E25CE12C995CD001DB640 /* TerminalIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TerminalIcon.png; sourceTree = "<group>"; };
+		01F4451314717363001FF6F6 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adium.framework; path = ../../../../Applications/Adium.app/Contents/Frameworks/Adium.framework; sourceTree = "<group>"; };
 		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -28,7 +29,6 @@
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7996F930E79D70B0000BA6C /* PipeEventPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PipeEventPlugin.h; sourceTree = "<group>"; };
 		A7996F940E79D70B0000BA6C /* PipeEventPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PipeEventPlugin.m; sourceTree = "<group>"; };
-		A7996F980E79D7950000BA6C /* Adium.Framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Adium.Framework; path = ../adium/Frameworks/Adium.Framework; sourceTree = SOURCE_ROOT; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -38,7 +38,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
-				A7996F990E79D7950000BA6C /* Adium.Framework in Frameworks */,
+				01F4451414717363001FF6F6 /* Adium.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +61,6 @@
 		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				A7996F980E79D7950000BA6C /* Adium.Framework */,
 				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
 				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
 			);
@@ -91,6 +90,7 @@
 		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01F4451314717363001FF6F6 /* Adium.framework */,
 				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -148,8 +148,11 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "PipeEventPlugin" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -196,13 +199,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../adium/build/Release\"",
+					"\"$(SRCROOT)/../adium/build/Debug\"",
+					"\"$(SYSTEM_APPS_DIR)/Adium.app/Contents/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -210,6 +215,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Application Support/Adium 2.0/PlugIns/";
 				PRODUCT_NAME = PipeEventPlugin;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = AdiumPlugin;
 			};
 			name = Debug;
@@ -218,10 +224,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../adium/build/Release\"",
+					"\"$(SRCROOT)/../adium/build/Debug\"",
+					"\"$(SYSTEM_APPS_DIR)/Adium.app/Contents/Frameworks\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -229,6 +238,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Application Support/Adium 2.0/PlugIns/";
 				PRODUCT_NAME = PipeEventPlugin;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = AdiumPlugin;
 			};
 			name = Release;
@@ -243,8 +253,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -256,8 +265,7 @@
 				GCC_MODEL_TUNING = G4;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
